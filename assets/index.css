@@ -1,0 +1,21 @@
+.main {
+  margin: 0 auto;
+}
+
+.query-form {
+  margin-top: 20px;
+  padding-top: 25px;
+  background-color: #f2f2f2;
+  padding-bottom: 4px;
+  padding-left: 20px;
+}
+
+.news {
+  width: 100%;
+}
+
+.empty {
+  text-align: center;
+  font-size: 30px;
+  color: #666666;
+}

@@ -1,0 +1,25 @@
+.page-enter-active {
+  animation: page-in .5s;
+}
+
+.page-leave-active {
+  animation: page-in .5s reverse;
+}
+
+@keyframes page-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bb {
+  background: red;
+  width: 100px;
+  height: 100px;
+}
