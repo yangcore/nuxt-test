@@ -19,7 +19,7 @@ router.get('/find', function (req, res) {
       };
     }
 
-    let x = await News.find(querObj).count();
+    let x = await News.find().count(querObj);
     News.find(querObj).sort({date: -1}).skip(Number((parms.page - 1) * parms.pageSize)).limit(Number(parms.pageSize)).exec(function (err, resrult) {
       if (err) return console.info(err);
       resrults.totalPage = x;

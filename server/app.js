@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 const db = require('./mogodb/mongo').db;
 const store = new MongoDBStore(
   {
-    url: 'mongodb://readWriteAnyDatabase:yc943134861@111.231.89.222:27017/craw?authSource=admin',
+    url: 'mongodb://readWriteAnyDatabase:yc943134861@127.0.0.1:27017/craw?authSource=admin',
     collection: 'mySessions',
     autoRemove: 'native', // 自动移除过期的session
     stringify: false,
@@ -29,7 +29,7 @@ app.use(session({
   store: store, // 存储到数据库中
   rolling: true, // 如果一直在操作，会根据当前时间重新设置cookie和session的过期时间（以当前时间为准+maxAge）
   cookie: {
-    domain: "127.0.0.1", // 域名
+    domain: "ychao.club", // 域名
     secure: "auto",  // 需要用到https
     maxAge: 1800000 // 30分钟过期时间
   }
