@@ -14,7 +14,7 @@ router.get("/loginOut", (req, res) => {
     if (err) {
       console.info(err, '退出出现错误');
     }
-    res.redirect('http://www.ychao.club/');
+    res.redirect(req.originalUrl);
   })
 });
 

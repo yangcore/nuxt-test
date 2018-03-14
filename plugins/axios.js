@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 var instance = axios.create({
-  baseURL: 'http://www.ychao.club/',
+  baseURL: '/',
   timeout: 30000
 });
 export default instance;
