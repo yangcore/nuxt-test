@@ -1,7 +1,7 @@
 const {Nuxt, Builder} = require('nuxt');
 const config = require('../nuxt.config');
 const nuxt = new Nuxt(config);
-module.exports = function (app) {
+module.exports = function (app, cf) {
   app.use(nuxt.render);
   if (config.dev) {
     new Builder(nuxt).build()
@@ -18,7 +18,7 @@ module.exports = function (app) {
     const server = app.listen(3030, function () {
       const host = server.address().address;
       const port = server.address().port;
-      console.log(`Example app listening at http://127.0.0.1:${port}`, host, port);
+      console.log(`Example app listening at http://${cf.domain}:${port}`, host, port);
     });
   }
 };
