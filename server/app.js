@@ -29,7 +29,7 @@ app.use(session({
   store: store, // 存储到数据库中
   rolling: true, // 如果一直在操作，会根据当前时间重新设置cookie和session的过期时间（以当前时间为准+maxAge）
   cookie: {
-    domain: "/", // 域名
+    // domain: "/", // 域名
     secure: "auto",  // 需要用到https
     maxAge: 1800000 // 30分钟过期时间
   }
