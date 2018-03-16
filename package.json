@@ -12,7 +12,8 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "serve:dev": "cross-env NODE_ENV=dev node ./server/app.js",
-    "serve:start": "nuxt build && cross-env NODE_ENV=production && pm2 stop app && pm2 start ./server/app.js --log-date-format='YYYY-MM-DD HH:mm Z'"
+    "serve:start": "nuxt build && cross-env NODE_ENV=production && pm2 relod app",
+    "serve": "cross-env NODE_ENV=production && pm2 relod app"
   },
   "dependencies": {
     "axios": "^0.17.1",
