@@ -29,9 +29,7 @@ router.get('/find', function (req, res) {
   }
 
   try {
-    findinfo(req).then(() => {
-      console.info(new Date().getTime() - start);
-    })
+    findinfo(req);
   } catch (error) {
     console.info(error);
   }
